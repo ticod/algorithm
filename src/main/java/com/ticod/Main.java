@@ -1,11 +1,10 @@
 package com.ticod;
 
-import com.ticod.baekjoon.Baekjoon11720;
+import com.ticod.baekjoon.*;
 
 public class Main {
     public static void main(String[] args) {
-        Baekjoon11720 problem = new Baekjoon11720();
-        int result = problem.solve(problem.input());
-        System.out.println("result : " + result);
+        Baekjoon problem = new Baekjoon11720();
+        problem.output();
     }
 }

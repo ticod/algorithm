@@ -9,28 +9,33 @@ N개의 숫자가 공백 없이 써 있다. 이 숫자를 모두 합해 출력�
 입력 : 1번째 줄의 숫자의 개수 N (1 <= N <= 100), 2번째 줄에 숫자 N개가 공백 없이 주어진다.
  */
 public class Baekjoon11720 implements Baekjoon {
-    public String[] input() {
-        Scanner scanner = new Scanner(System.in);
-        String[] result = new String[2];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = scanner.next();
-        }
-        return result;
+    int n;
+    int[] numbers;
+
+    public Baekjoon11720() {
+        input();
     }
-    public Integer solve(String[] data) {
-        int n = Integer.parseInt(data[0]);
-        char[] numbers = data[1].toCharArray();
+
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
+        n = Integer.parseInt(scanner.nextLine());
+        numbers = new int[n];
+        char[] temp = scanner.nextLine().toCharArray();
+        for (int i = 0; i < n; i++) {
+            numbers[i] = temp[i] - '0';
+        }
+    }
+    public Integer solve() {
         int result = 0;
 
         for (int i = 0; i < n; i++) {
-            result += numbers[i] - '0';
+            result += numbers[i];
         }
 
         return result;
     }
 
     public void output() {
-        String[] data = this.input();
-        System.out.println("result: " + this.solve(data));
+        System.out.println("result: " + this.solve());
     }
 }

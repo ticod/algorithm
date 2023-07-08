@@ -13,32 +13,39 @@ import java.util.Scanner;
  */
 public class Baekjoon1546 implements Baekjoon {
 
-    @Override
-    public String[] input() {
-        Scanner scanner = new Scanner(System.in);
-        String[] result = new String[2];
-        for (int i = 0; i < result.length; i++) {
-            result[i] = scanner.nextLine();
-        }
-        return result;
+    int n;
+    int[] grade;
+
+    public Baekjoon1546() {
+        input();
     }
 
     @Override
-    public Double solve(String[] data) {
-        int n = Integer.parseInt(data[0]);
+    public void input() {
+        Scanner scanner = new Scanner(System.in);
+        n = Integer.parseInt(scanner.nextLine());
+        grade = new int[n];
+        String temp = scanner.nextLine();
+        for (int i = 0; i < n; i++) {
+            grade[i] = Integer.parseInt(temp.split(" ")[i]);
+        }
+    }
+
+    @Override
+    public Double solve() {
         int sum = 0;
         int max = 0;
         for (int i = 0; i < n; i++) {
             // 평균 구하기
-            sum += Integer.parseInt(data[1].split(" ")[i]);
+            sum += grade[i];
             // 최댓값 구하기
-            max = Math.max(max, Integer.parseInt(data[1].split(" ")[i]));
+            max = Math.max(max, grade[i]);
         }
         return (double) sum / max * 100 / n;
     }
 
     @Override
     public void output() {
-        System.out.println("result: " + this.solve(this.input()));
+        System.out.println("result: " + this.solve());
     }
 }

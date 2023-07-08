@@ -1,9 +1,11 @@
 package com.ticod;
 
+import java.io.IOException;
+
 public interface Baekjoon {
-    String[] input();
+    void input() throws IOException;
 
-    Object solve(String[] data);
+    Object solve();
 
-    void output();
+    void output() throws IOException;
 }

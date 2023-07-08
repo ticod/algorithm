@@ -1,9 +1,9 @@
 package com.ticod;
 
 public interface Baekjoon {
-    public String[] input();
+    String[] input();
 
-    public Object solve(String[] data);
+    Object solve(String[] data);
 
-    public void output();
+    void output();
 }

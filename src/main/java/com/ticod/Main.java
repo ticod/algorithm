@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        Baekjoon problem = new Baekjoon11720();
+        Baekjoon problem = new Baekjoon11659();
         problem.output();
     }
 }

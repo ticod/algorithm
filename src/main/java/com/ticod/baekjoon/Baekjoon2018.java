@@ -9,7 +9,6 @@ import java.util.Scanner;
  * 어떤 자연수 N에 대해 연속된 자연수의 합으로 나타낼 수 있는 가짓수 계산
  * 입력
  *  자연수 N (1 <= N <= 10,000,000)
- *
  * 입력의 크기가 크기 때문에 투포인터 방식 활용
  *  1. start index, end index를 두고, 구간의 합을 구함
  *  2. 합이 자연수 N보다 작다면 end index의 크기를 증가  (구간 증가 -> 합 증가)
@@ -19,12 +18,12 @@ import java.util.Scanner;
 public class Baekjoon2018 implements Baekjoon {
     int n;
 
-    public Baekjoon2018() throws IOException {
+    public Baekjoon2018() {
         input();
     }
 
     @Override
-    public void input() throws IOException {
+    public void input() {
         Scanner scanner = new Scanner(System.in);
         n = Integer.parseInt(scanner.nextLine());
     }
@@ -51,7 +50,7 @@ public class Baekjoon2018 implements Baekjoon {
     }
 
     @Override
-    public void output() throws IOException {
+    public void output() {
         System.out.println("result : " + solve());
     }
 }

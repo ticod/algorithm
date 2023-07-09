@@ -2,7 +2,6 @@ package com.ticod.baekjoon;
 
 import com.ticod.Baekjoon;
 
-import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.StringTokenizer;

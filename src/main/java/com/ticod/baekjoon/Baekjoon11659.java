@@ -64,7 +64,7 @@ public class Baekjoon11659 implements Baekjoon {
     }
 
     @Override
-    public void output() throws IOException {
+    public void output() {
         Long[] results = this.solve();
         System.out.println("result");
         for (Long result : results) {

@@ -7,5 +7,5 @@ public interface Baekjoon {
 
     Object solve();
 
-    void output() throws IOException;
+    void output();
 }

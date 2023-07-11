@@ -1,6 +1,6 @@
 package com.ticod;
 
-import com.ticod.algorithm.sort.BubbleSort;
+import com.ticod.algorithm.sort.*;
 
 public class SortTest {
     public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class SortTest {
             elements[i] = (int) (Math.random() * elements.length);
         }
         output(elements);
-        new BubbleSort().sort(elements);
+        new InsertionSort().sort(elements);
         output(elements);
     }
 

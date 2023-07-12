@@ -9,7 +9,7 @@ public class SortTest {
             elements[i] = (int) (Math.random() * elements.length);
         }
         output(elements);
-        new InsertionSort().sort(elements);
+        new QuickSort().sort(elements);
         output(elements);
     }
 

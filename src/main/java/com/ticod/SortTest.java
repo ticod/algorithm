@@ -9,8 +9,9 @@ public class SortTest {
             elements[i] = (int) (Math.random() * elements.length);
         }
         output(elements);
-        new QuickSort().sort(elements);
-        output(elements);
+//        new MergeSort().sort(elements);
+//        output(elements);
+        output(new MergeSort().sort(elements, 0, elements.length));
     }
 
     private static void output(int[] elements) {
